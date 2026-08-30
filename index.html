@@ -3,63 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manga Digital Branding Agency</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <title>Manga Digital</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #F7F4EC;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-        }
-        .video-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -10;
-        }
-        .video-container video {
-            min-width: 100%;
-            min-height: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* Garante que o vídeo cubra todo o contêiner, mantendo a proporção */
-            object-fit: cover;
-        }
-        .overlay {
-            position: fixed; /* Mudado para fixed para ocupar a tela toda */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0); /* Cor de sobreposição escura com opacidade */
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
-            text-align: center;
-            z-index: -1; /* Colocado atrás do conteúdo de texto, mas na frente do vídeo */
+            min-height: 100vh;
+            padding: 24px;
         }
-        h1 {
-            letter-spacing: -0.08em;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+
+        img.logo {
+            width: 100%;
+            max-width: 382px;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
-<body class="bg-gray-100">
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="https://mangadigital.github.io/assets/astronaut.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
-        </video>
-    </div>
-    <div class="overlay">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 text-white">Tansformamos negócios em marcas impactantes e memoráveis</h1>
-        <p class="text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto">Sua jornada de branding começa aqui. Descubra em qual etapa da transformação de marca você está e como podemos elevá-la a novos patamares de relevância.</p>
-    </div>
+<body>
+    <img class="logo" src="assets/logo-manga.svg" alt="Manga Digital">
 </body>
 </html>
