@@ -1,17 +1,20 @@
 // Menu Mobile Toggle
 const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const navLinksLeft = document.querySelector('.nav-links-left');
+const navLinksRight = document.querySelector('.nav-links-right');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
+    navLinksLeft.classList.toggle('active');
+    navLinksRight.classList.toggle('active');
 });
 
 // Fechar menu ao clicar em um link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
+        navLinksLeft.classList.remove('active');
+        navLinksRight.classList.remove('active');
     });
 });
 
@@ -66,7 +69,7 @@ function updateNavbar(scrollTop) {
 // Suporte para navegação por teclado
 document.addEventListener('keydown', (e) => {
     const currentSlide = Math.round(slidesContainer.scrollTop / window.innerHeight);
-    
+
     if (e.key === 'ArrowDown' && currentSlide < slides.length - 1) {
         slides[currentSlide + 1].scrollIntoView({ behavior: 'smooth' });
     } else if (e.key === 'ArrowUp' && currentSlide > 0) {
