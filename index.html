@@ -3,41 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
     <title>Manga Digital</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            height: 100%;
-            width: 100%;
-            background-color: #F7F4EC;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 24px;
-        }
-
-        img.logo {
-            width: 100%;
-            max-width: 382px;
-            height: auto;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img class="logo" src="assets/logo-manga.svg" alt="Manga Digital">
+    <!-- Menu Fixo -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo-manga.svg" alt="Manga Digital">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#manifesto" class="nav-link">Manifesto</a></li>
+                <li><a href="#metodologia" class="nav-link">Metodologia</a></li>
+                <li><a href="#experiencias" class="nav-link">Experiências</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container de Slides -->
+    <main class="slides-container">
+        <!-- Slide 1: Manifesto -->
+        <section id="manifesto" class="slide">
+            <div class="slide-background">
+                <video autoplay muted loop playsinline>
+                    <source src="video-manifesto.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide-content">
+                <h1 class="slide-title">Manifesto</h1>
+                <p class="slide-text">
+                    Acreditamos que o mangá é mais que entretenimento — é uma forma de arte que conecta culturas,
+                    desperta emoções e transforma perspectivas. Nossa missão é democratizar o acesso a essas histórias
+                    incríveis, criando pontes entre criadores e leitores em todo o mundo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Metodologia -->
+        <section id="metodologia" class="slide">
+            <div class="slide-background">
+                <img src="bg-metodologia.jpg" alt="Background Metodologia">
+            </div>
+            <div class="slide-content">
+                <h1 class="slide-title">Metodologia</h1>
+                <p class="slide-text">
+                    Desenvolvemos uma plataforma intuitiva que prioriza a experiência do leitor.
+                    Com tecnologia de ponta, oferecemos leitura fluida, qualidade de imagem excepcional
+                    e uma curadoria cuidadosa de títulos que vão desde os clássicos até obras independentes.
+                </p>
+            </div>
+        </section>
+
+        <!-- Slide 3: Experiências -->
+        <section id="experiencias" class="slide">
+            <div class="slide-background">
+                <video autoplay muted loop playsinline>
+                    <source src="video-experiencias.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide-content">
+                <h1 class="slide-title">Experiências</h1>
+                <p class="slide-text">
+                    Mergulhe em mundos extraordinários através de nossa coleção diversificada.
+                    De action-packed shonens a delicados slice-of-life, cada página é uma porta
+                    para novas aventuras. Junte-se a milhares de leitores que já descobriram seu próximo mangá favorito.
+                </p>
+            </div>
+        </section>
+
+        <!-- Slide 4: Contato -->
+        <section id="contato" class="slide">
+            <div class="slide-background">
+                <img src="bg-contato.jpg" alt="Background Contato">
+            </div>
+            <div class="slide-content">
+                <h1 class="slide-title">Contato</h1>
+                <div class="contact-info">
+                    <p class="slide-text">Vamos conversar? Entre em contato conosco:</p>
+                    <div class="contact-details">
+                        <p>📧 contato@mangadigital.com</p>
+                        <p>📱 (11) 9999-9999</p>
+                        <p>📍 São Paulo, Brasil</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Discord</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Indicadores de Slide -->
+    <div class="slide-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <span class="indicator" data-slide="3"></span>
+    </div>
+
+    <script src="assets/script.js"></script>
 </body>
 </html>
