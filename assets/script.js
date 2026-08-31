@@ -33,15 +33,24 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 const slidesContainer = document.querySelector('.slides-container');
 const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.indicator');
+const navbar = document.querySelector('.navbar');
 
 slidesContainer.addEventListener('scroll', () => {
     const scrollTop = slidesContainer.scrollTop;
     const slideHeight = window.innerHeight;
     const currentSlide = Math.round(scrollTop / slideHeight);
 
+    // Atualizar indicadores
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentSlide);
     });
+
+    // Mostrar navbar com blur ao rolar
+    if (scrollTop > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
 
 // Navegação por indicadores
