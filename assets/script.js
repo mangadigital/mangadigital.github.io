@@ -1,17 +1,17 @@
 // Menu Mobile Toggle
 const hamburger = document.querySelector('.hamburger');
-const navList = document.querySelector('.nav-list');
+const mobileMenu = document.querySelector('.mobile-menu');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
-    navList.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
 });
 
 // Fechar menu ao clicar em um link
-document.querySelectorAll('.nav-link, .nav-logo a').forEach(link => {
+document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
-        navList.classList.remove('active');
+        mobileMenu.classList.remove('active');
     });
 });
 
