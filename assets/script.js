@@ -1,5 +1,5 @@
 // Menu Mobile Toggle
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('.mobile-hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 hamburger.addEventListener('click', () => {
@@ -8,7 +8,7 @@ hamburger.addEventListener('click', () => {
 });
 
 // Fechar menu ao clicar em um link
-document.querySelectorAll('.mobile-link').forEach(link => {
+document.querySelectorAll('.mobile-menu .nav-link, .mobile-logo').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         mobileMenu.classList.remove('active');
@@ -29,30 +29,28 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Scroll Snap e Indicadores
+// Scroll Snap, Indicadores e Navbar "frosted"
 const slidesContainer = document.querySelector('.slides-container');
 const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.indicator');
 const navbar = document.querySelector('.navbar');
+const mobileNavbar = document.querySelector('.mobile-navbar');
 
-// Atualizar indicadores ao rolar
 slidesContainer.addEventListener('scroll', () => {
     const scrollTop = slidesContainer.scrollTop;
     const slideHeight = window.innerHeight;
     const currentSlide = Math.round(scrollTop / slideHeight);
 
-    // Atualizar indicadores
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentSlide);
     });
 
-    // Mostrar navbar com blur ao rolar
-    if (scrollTop > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+    const scrolled = scrollTop > 50;
+    navbar.classList.toggle('scrolled', scrolled);
+    mobileNavbar.classList.toggle('scrolled', scrolled);
 });
+
+slidesContainer.dispatchEvent(new Event('scroll'));
 
 // Navegação por indicadores
 indicators.forEach((indicator, index) => {
@@ -61,27 +59,7 @@ indicators.forEach((indicator, index) => {
     });
 });
 
-// Navegação suave dos links do menu
-navLinksList.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-    });
-});
-
-// Navbar transparente no topo, sólida ao rolar
-function updateNavbar(scrollTop) {
-    const navbar = document.querySelector('.navbar');
-    if (scrollTop > 50) {
-        navbar.style.background = 'rgba(47, 53, 66, 0.98)';
-    } else {
-        navbar.style.background = 'rgba(47, 53, 66, 0.95)';
-    }
-}
-
-// Suporte para navegação por teclado
+// Navegação por teclado
 document.addEventListener('keydown', (e) => {
     const currentSlide = Math.round(slidesContainer.scrollTop / window.innerHeight);
 
@@ -112,5 +90,4 @@ const observer = new IntersectionObserver((entries) => {
 
 slides.forEach(slide => observer.observe(slide));
 
-// Prevenir scroll horizontal
 document.body.style.overflow = 'hidden';

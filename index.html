@@ -3,159 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manga Digital</title>
+    <title>Mangá Digital</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
 </head>
 <body>
-    <!-- Menu Fixo -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <!-- Logo Mobile (sempre visível) -->
-                <div class="logo-mobile">
-                    <a href="#hero">
-                        <img src="assets/logo-manga.svg" alt="MANGA DIGITAL">
-                    </a>
-                </div>
+    <!-- Menu Fixo (Desktop) -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#manifesto" class="nav-link">manifesto</a></li>
+            <li><a href="#metodologia" class="nav-link">metodologia</a></li>
+            <li class="nav-logo">
+                <a href="#manifesto">
+                    <img src="assets/logo-manga.svg" alt="MANGA">
+                </a>
+            </li>
+            <li><a href="#experiencias" class="nav-link">experiências</a></li>
+            <li><a href="#contato" class="nav-link">contato</a></li>
+        </ul>
+    </nav>
 
-                <!-- Menu Desktop Centralizado -->
-                <ul class="nav-list">
-                    <li><a href="#manifesto" class="nav-link">manifesto</a></li>
-                    <li><a href="#metodologia" class="nav-link">metodologia</a></li>
-                    <li class="nav-logo">
-                        <a href="#hero">
-                            <img src="assets/logo-manga.svg" alt="MANGA DIGITAL">
-                        </a>
-                    </li>
-                    <li><a href="#experiencias" class="nav-link">experiências</a></li>
-                    <li><a href="#contato" class="nav-link">contato</a></li>
-                </ul>
+    <!-- Menu Mobile -->
+    <nav class="mobile-navbar">
+        <a href="#manifesto" class="mobile-logo">
+            <img src="assets/logo-manga.svg" alt="MANGA">
+        </a>
+        <div class="mobile-hamburger" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <ul class="mobile-menu">
+        <li><a href="#manifesto" class="nav-link">manifesto</a></li>
+        <li><a href="#metodologia" class="nav-link">metodologia</a></li>
+        <li><a href="#experiencias" class="nav-link">experiências</a></li>
+        <li><a href="#contato" class="nav-link">contato</a></li>
+    </ul>
 
-                <!-- Hamburger Menu -->
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                </div>
+    <!-- Container de Slides -->
+    <main class="slides-container">
+        <!-- Slide: Hero -->
+        <section id="hero" class="slide hero">
+            <div class="slide-background">
+                <img src="assets/close-up-leaves-flowers.jpg" alt="Background Hero">
             </div>
-
-            <!-- Menu Mobile Dropdown -->
-            <div class="mobile-menu">
-                <div class="mobile-menu-content">
-                    <a href="#manifesto" class="mobile-link">manifesto</a>
-                    <a href="#metodologia" class="mobile-link">metodologia</a>
-                    <a href="#experiencias" class="mobile-link">experiências</a>
-                    <a href="#contato" class="mobile-link">contato</a>
-                </div>
+            <div class="slide-content">
+                <h1 class="slide-title">experiências digitais que fazem negócios frutificarem</h1>
+                <p class="slide-text">
+                    Combinamos estratégia, design, branding e tecnologia para transformar boas ideias em experiências
+                    que conectam pessoas, fortalecem marcas e geram resultados.
+                </p>
+                <a href="#contato" class="social-link hero-cta">Vamos cultivar uma ideia?</a>
             </div>
-        </nav>
+        </section>
 
-        <!-- Container de Slides -->
-        <main class="slides-container">
-            <!-- Slide 0: Hero -->
-            <section id="hero" class="slide">
-                <div class="slide-background">
-                    <video autoplay muted loop playsinline>
-                        <source src="video-hero.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="slide-content hero-content">
-                    <h1 class="hero-title">experiências digitais que fazem negócios frutificarem</h1>
-                    <p class="hero-text">
-                        Combinamos estratégia, design, branding e tecnologia para transformar boas ideias
-                        em experiências que conectam pessoas, fortalecem marcas e geram resultados.
-                    </p>
-                    <a href="#contato" class="cta-button">Vamos cultivar uma ideia?</a>
-                </div>
-            </section>
+        <!-- Slide 1: Manifesto -->
+        <section id="manifesto" class="slide">
+            <div class="slide-background">
+                <video autoplay muted loop playsinline>
+                    <source src="video-manifesto.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide-content">
+                <h1 class="slide-title">Manifesto</h1>
+                <p class="slide-text">
+                    Acreditamos que o mangá é mais que entretenimento — é uma forma de arte que conecta culturas,
+                    desperta emoções e transforma perspectivas. Nossa missão é democratizar o acesso a essas histórias
+                    incríveis, criando pontes entre criadores e leitores em todo o mundo.
+                </p>
+            </div>
+        </section>
 
-            <!-- Slide 1: Manifesto -->
-            <section id="manifesto" class="slide">
-                <div class="slide-background">
-                    <video autoplay muted loop playsinline>
-                        <source src="video-manifesto.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="slide-content">
-                    <h1 class="slide-title">Manifesto</h1>
-                    <p class="slide-text">
-                        Acreditamos que o mangá é mais que entretenimento — é uma forma de arte que conecta culturas,
-                        desperta emoções e transforma perspectivas. Nossa missão é democratizar o acesso a essas histórias
-                        incríveis, criando pontes entre criadores e leitores em todo o mundo.
-                    </p>
-                </div>
-            </section>
+        <!-- Slide 2: Metodologia -->
+        <section id="metodologia" class="slide">
+            <div class="slide-background">
+                <img src="bg-metodologia.jpg" alt="Background Metodologia">
+            </div>
+            <div class="slide-content">
+                <h1 class="slide-title">Metodologia</h1>
+                <p class="slide-text">
+                    Desenvolvemos uma plataforma intuitiva que prioriza a experiência do leitor.
+                    Com tecnologia de ponta, oferecemos leitura fluida, qualidade de imagem excepcional
+                    e uma curadoria cuidadosa de títulos que vão desde os clássicos até obras independentes.
+                </p>
+            </div>
+        </section>
 
-            <!-- Slide 2: Metodologia -->
-            <section id="metodologia" class="slide">
-                <div class="slide-background">
-                    <img src="bg-metodologia.jpg" alt="Background Metodologia">
-                </div>
-                <div class="slide-content">
-                    <h1 class="slide-title">Metodologia</h1>
-                    <p class="slide-text">
-                        Desenvolvemos uma plataforma intuitiva que prioriza a experiência do leitor.
-                        Com tecnologia de ponta, oferecemos leitura fluida, qualidade de imagem excepcional
-                        e uma curadoria cuidadosa de títulos que vão desde os clássicos até obras independentes.
-                    </p>
-                </div>
-            </section>
+        <!-- Slide 3: Experiências -->
+        <section id="experiencias" class="slide">
+            <div class="slide-background">
+                <video autoplay muted loop playsinline>
+                    <source src="video-experiencias.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide-content">
+                <h1 class="slide-title">Experiências</h1>
+                <p class="slide-text">
+                    Mergulhe em mundos extraordinários através de nossa coleção diversificada.
+                    De action-packed shonens a delicados slice-of-life, cada página é uma porta
+                    para novas aventuras. Junte-se a milhares de leitores que já descobriram seu próximo mangá favorito.
+                </p>
+            </div>
+        </section>
 
-            <!-- Slide 3: Experiências -->
-            <section id="experiencias" class="slide">
-                <div class="slide-background">
-                    <video autoplay muted loop playsinline>
-                        <source src="video-experiencias.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="slide-content">
-                    <h1 class="slide-title">Experiências</h1>
-                    <p class="slide-text">
-                        Mergulhe em mundos extraordinários através de nossa coleção diversificada.
-                        De action-packed shonens a delicados slice-of-life, cada página é uma porta
-                        para novas aventuras. Junte-se a milhares de leitores que já descobriram seu próximo mangá favorito.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Slide 4: Contato -->
-            <section id="contato" class="slide">
-                <div class="slide-background">
-                    <img src="bg-contato.jpg" alt="Background Contato">
-                </div>
-                <div class="slide-content">
-                    <h1 class="slide-title">Contato</h1>
-                    <div class="contact-info">
-                        <p class="slide-text">Vamos conversar? Entre em contato conosco:</p>
-                        <div class="contact-details">
-                            <p>📧 contato@mangadigital.com</p>
-                            <p>📱 (11) 9999-9999</p>
-                            <p>📍 São Paulo, Brasil</p>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" class="social-link">Instagram</a>
-                            <a href="#" class="social-link">Twitter</a>
-                            <a href="#" class="social-link">Discord</a>
-                        </div>
+        <!-- Slide 4: Contato -->
+        <section id="contato" class="slide">
+            <div class="slide-background">
+                <img src="bg-contato.jpg" alt="Background Contato">
+            </div>
+            <div class="slide-content">
+                <h1 class="slide-title">Contato</h1>
+                <div class="contact-info">
+                    <p class="slide-text">Vamos conversar? Entre em contato conosco:</p>
+                    <div class="contact-details">
+                        <p>📧 contato@mangadigital.com</p>
+                        <p>📱 (11) 9999-9999</p>
+                        <p>📍 São Paulo, Brasil</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Discord</a>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <!-- Indicadores de Slide -->
-        <div class="slide-indicators">
-            <span class="indicator active" data-slide="0"></span>
-            <span class="indicator" data-slide="1"></span>
-            <span class="indicator" data-slide="2"></span>
-            <span class="indicator" data-slide="3"></span>
-            <span class="indicator" data-slide="4"></span>
-        </div>
+    <!-- Indicadores de Slide -->
+    <div class="slide-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <span class="indicator" data-slide="3"></span>
+        <span class="indicator" data-slide="4"></span>
+    </div>
 
-        <script src="script.js"></script>
-    </body>
-    </html>
+    <script src="assets/script.js"></script>
+</body>
+</html>
