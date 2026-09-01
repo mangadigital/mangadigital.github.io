@@ -41,18 +41,20 @@ body {
 }
 
 .nav-list {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    gap: 3rem;
+    width: 100%;
+    max-width: 960px;
 }
 
 .nav-list li {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .nav-logo img {
