@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary-color: #ff4757;
+    --primary-color: #E95F63;
     --secondary-color: #2f3542;
     --text-light: #ffffff;
     --text-dark: #2f3542;
@@ -30,7 +30,7 @@ body {
     width: 100%;
     z-index: 1000;
     background: transparent;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     transition: var(--transition);
 }
 
@@ -115,7 +115,7 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 1000;
+        z-index: 1002;
         padding: 1.5rem 2rem;
         background: transparent;
         transition: var(--transition);
