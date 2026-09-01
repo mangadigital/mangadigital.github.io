@@ -401,11 +401,6 @@ body {
     }
 
     .slide-indicators {
-        right: 1rem;
-    }
-
-    .indicator {
-        width: 10px;
-        height: 10px;
+        display: none;
     }
 }
