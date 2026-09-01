@@ -94,7 +94,8 @@ body {
 }
 
 /* Mobile Navbar (escondida no desktop) */
-.mobile-navbar {
+.mobile-navbar,
+.mobile-menu {
     display: none;
 }
 
@@ -219,6 +220,23 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
+    background: linear-gradient(135deg, #21242e 0%, #191b22 100%);
+}
+
+.slide--manifesto .slide-background {
+    background: linear-gradient(135deg, #23262e, #181a20);
+}
+
+.slide--metodologia .slide-background {
+    background: linear-gradient(135deg, #1f2833, #141a24);
+}
+
+.slide--experiencias .slide-background {
+    background: linear-gradient(135deg, #2a2430, #171317);
+}
+
+.slide--contato .slide-background {
+    background: linear-gradient(135deg, #242a24, #141915);
 }
 
 .slide-background video,

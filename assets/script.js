@@ -36,10 +36,9 @@ const indicators = document.querySelectorAll('.indicator');
 const navbar = document.querySelector('.navbar');
 const mobileNavbar = document.querySelector('.mobile-navbar');
 
-slidesContainer.addEventListener('scroll', () => {
+const updateChrome = () => {
     const scrollTop = slidesContainer.scrollTop;
-    const slideHeight = window.innerHeight;
-    const currentSlide = Math.round(scrollTop / slideHeight);
+    const currentSlide = Math.round(scrollTop / window.innerHeight);
 
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentSlide);
@@ -48,9 +47,13 @@ slidesContainer.addEventListener('scroll', () => {
     const scrolled = scrollTop > 50;
     navbar.classList.toggle('scrolled', scrolled);
     mobileNavbar.classList.toggle('scrolled', scrolled);
-});
+};
 
-slidesContainer.dispatchEvent(new Event('scroll'));
+slidesContainer.addEventListener('scroll', updateChrome);
+window.addEventListener('load', updateChrome);
+window.addEventListener('pageshow', updateChrome);
+
+updateChrome();
 
 // Navegação por indicadores
 indicators.forEach((indicator, index) => {
