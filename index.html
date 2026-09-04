@@ -194,17 +194,22 @@
                     ganhar forma. Talvez você já saiba onde quer chegar ou ainda esteja descobrindo o caminho. Conte para
                     a gente o que você está tentando construir. Toda boa experiência começa entendendo o terreno.
                 </p>
-                <form action="https://formspree.io/f/mvkoqwov" method="POST" class="contato-form">
+                <div data-fs-success class="contato-success">Obrigado! Sua mensagem foi enviada.</div>
+                <div data-fs-error class="contato-error"></div>
+                <form id="contato-form" class="contato-form">
                     <div class="contato-form-field">
-                        <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+                        <input type="text" name="nome" id="nome" placeholder="Seu nome" data-fs-field required>
+                        <span data-fs-error="nome" class="contato-field-error"></span>
                     </div>
                     <div class="contato-form-field">
-                        <input type="email" name="email" id="email" placeholder="Seu email" required>
+                        <input type="email" name="email" id="email" placeholder="Seu email" data-fs-field required>
+                        <span data-fs-error="email" class="contato-field-error"></span>
                     </div>
                     <div class="contato-form-field">
-                        <textarea name="mensagem" id="mensagem" placeholder="O que você está tentando cultivar?" required></textarea>
+                        <textarea name="mensagem" id="mensagem" placeholder="O que você está tentando cultivar?" data-fs-field required></textarea>
+                        <span data-fs-error="mensagem" class="contato-field-error"></span>
                     </div>
-                    <button type="submit" class="social-link contato-submit">Conectar</button>
+                    <button type="submit" class="social-link contato-submit" data-fs-submit-btn>Cultivar</button>
                 </form>
             </div>
         </section>
@@ -223,6 +228,11 @@
         <span class="indicator" data-slide="4"></span>
     </div>
 
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contato-form', formId: 'mvkoqwov' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
     <script src="assets/script.js"></script>
 </body>
 </html>

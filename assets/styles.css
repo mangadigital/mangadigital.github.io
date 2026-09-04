@@ -478,6 +478,7 @@ body {
 
 .contato-form-field {
     display: flex;
+    flex-direction: column;
 }
 
 .contato-form input,
@@ -522,6 +523,44 @@ body {
     background: var(--primary-color);
     border-color: var(--primary-color);
     transform: translateY(-3px);
+}
+
+.contato-success {
+    display: none;
+    text-align: center;
+    font-family: 'Krona One', sans-serif;
+    font-size: 1rem;
+    color: #7ce495;
+    margin-bottom: 1.5rem;
+}
+
+.contato-success[data-fs-show] {
+    display: block;
+}
+
+.contato-error {
+    display: none;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 0.95rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+.contato-error[data-fs-show] {
+    display: block;
+}
+
+.contato-field-error {
+    display: none;
+    font-family: 'Lora', serif;
+    font-size: 0.85rem;
+    color: #ff6b6b;
+    margin-top: 0.4rem;
+}
+
+.contato-field-error[data-fs-show] {
+    display: block;
 }
 
 .social-links {
