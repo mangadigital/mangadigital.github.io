@@ -184,25 +184,35 @@
 
         <!-- Slide 4: Contato -->
         <section id="contato" class="slide slide--contato">
-            <div class="slide-background"></div>
-            <div class="slide-content">
-                <h1 class="slide-title">Contato</h1>
-                <div class="contact-info">
-                    <p class="slide-text">Vamos conversar? Entre em contato conosco:</p>
-                    <div class="contact-details">
-                        <p>📧 contato@mangadigital.com</p>
-                        <p>📱 (11) 9999-9999</p>
-                        <p>📍 Rio de Janeiro, Brasil</p>
+            <div class="slide-background">
+                <img src="assets/2148211926.jpg" alt="Background Contato">
+            </div>
+            <div class="slide-content contato-content">
+                <h1 class="slide-title">O que você está tentando cultivar?</h1>
+                <p class="slide-text contato-intro">
+                    Talvez seja uma ideia, uma nova marca, um produto ou uma transformação que ainda está começando a
+                    ganhar forma. Talvez você já saiba onde quer chegar ou ainda esteja descobrindo o caminho. Conte para
+                    a gente o que você está tentando construir. Toda boa experiência começa entendendo o terreno.
+                </p>
+                <form action="https://formspree.io/f/mvkoqwov" method="POST" class="contato-form">
+                    <div class="contato-form-field">
+                        <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
                     </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">Discord</a>
+                    <div class="contato-form-field">
+                        <input type="email" name="email" id="email" placeholder="Seu email" required>
                     </div>
-                </div>
+                    <div class="contato-form-field">
+                        <textarea name="mensagem" id="mensagem" placeholder="O que você está tentando cultivar?" required></textarea>
+                    </div>
+                    <button type="submit" class="social-link contato-submit">Conectar</button>
+                </form>
             </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <p>Copyright © 2026 Manga Digital - Construido com ❤, HTML, CSS e JavaScript.</p>
+    </footer>
 
     <!-- Indicadores de Slide -->
     <div class="slide-indicators">

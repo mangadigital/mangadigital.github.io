@@ -455,17 +455,73 @@ body {
 }
 
 /* Contact Section */
-.contact-info {
-    margin-top: 2rem;
+.contato-content {
+    max-width: 760px;
 }
 
-.contact-details {
-    margin: 2rem 0;
-    font-size: 1.2rem;
+.contato-content .slide-title {
+    margin-bottom: 1.5rem;
 }
 
-.contact-details p {
-    margin: 1rem 0;
+.contato-intro {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+}
+
+.contato-form-field {
+    display: flex;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: var(--text-light);
+    background: rgba(47, 53, 66, 0.45);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 2px solid var(--text-light);
+    border-radius: 12px;
+    outline: none;
+    transition: var(--transition);
+}
+
+.contato-form input::placeholder,
+.contato-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contato-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contato-submit {
+    align-self: center;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.contato-submit:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 .social-links {
@@ -489,6 +545,17 @@ body {
     background: var(--primary-color);
     border-color: var(--primary-color);
     transform: translateY(-3px);
+}
+
+/* Footer */
+.site-footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-family: 'Lora', serif;
+    font-size: 0.9rem;
+    color: var(--text-light);
 }
 
 /* Slide Indicators */
@@ -605,6 +672,15 @@ body {
     }
 
     .experiencias-copy {
+        font-size: 1rem;
+    }
+
+    .contato-content .slide-title {
+        font-size: 1.6rem;
+        line-height: 1.35;
+    }
+
+    .contato-intro {
         font-size: 1rem;
     }
 
