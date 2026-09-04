@@ -29,68 +29,35 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Scroll Snap, Indicadores e Navbar "frosted"
-const slidesContainer = document.querySelector('.slides-container');
-const slides = document.querySelectorAll('.slide');
-const indicators = document.querySelectorAll('.indicator');
+// Navbar "frosted" ao rolar a página
 const navbar = document.querySelector('.navbar');
 const mobileNavbar = document.querySelector('.mobile-navbar');
 
-const updateChrome = () => {
-    const scrollTop = slidesContainer.scrollTop;
-    const currentSlide = Math.round(scrollTop / window.innerHeight);
-
-    indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentSlide);
-    });
-
-    const scrolled = scrollTop > 50;
+const updateNavbar = () => {
+    const scrolled = window.scrollY > 50;
     navbar.classList.toggle('scrolled', scrolled);
     mobileNavbar.classList.toggle('scrolled', scrolled);
 };
 
-slidesContainer.addEventListener('scroll', updateChrome);
-window.addEventListener('load', updateChrome);
-window.addEventListener('pageshow', updateChrome);
+window.addEventListener('scroll', updateNavbar, { passive: true });
+window.addEventListener('load', updateNavbar);
+window.addEventListener('pageshow', updateNavbar);
 
-updateChrome();
+updateNavbar();
 
-// Navegação por indicadores
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        slides[index].scrollIntoView({ behavior: 'smooth' });
-    });
-});
+// Animação de entrada das seções
+const sections = document.querySelectorAll('.section');
 
-// Navegação por teclado
-document.addEventListener('keydown', (e) => {
-    const currentSlide = Math.round(slidesContainer.scrollTop / window.innerHeight);
-
-    if (e.key === 'ArrowDown' && currentSlide < slides.length - 1) {
-        slides[currentSlide + 1].scrollIntoView({ behavior: 'smooth' });
-    } else if (e.key === 'ArrowUp' && currentSlide > 0) {
-        slides[currentSlide - 1].scrollIntoView({ behavior: 'smooth' });
-    }
-});
-
-// Animação de entrada dos slides
-const observerOptions = {
-    root: slidesContainer,
-    threshold: 0.5
-};
-
-const observer = new IntersectionObserver((entries) => {
+const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const content = entry.target.querySelector('.slide-content');
-            content.style.animation = 'none';
-            setTimeout(() => {
-                content.style.animation = 'fadeInUp 1s ease-out';
-            }, 10);
+            const content = entry.target.querySelector('.section-content');
+            if (content) {
+                content.classList.add('is-visible');
+            }
+            sectionObserver.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.2 });
 
-slides.forEach(slide => observer.observe(slide));
-
-document.body.style.overflow = 'hidden';
+sections.forEach(section => sectionObserver.observe(section));

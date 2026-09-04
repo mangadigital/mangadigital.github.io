@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/site.webmanifest">
     <link rel="stylesheet" href="assets/styles.css">
+    <noscript><style>.section-content { opacity: 1 !important; transform: none !important; }</style></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
@@ -49,13 +50,13 @@
         <li><a href="#contato" class="nav-link">conexões</a></li>
     </ul>
 
-    <main class="slides-container">
-        <!-- Slide: Hero -->
-        <section id="hero" class="slide hero">
-            <div class="slide-background">
+    <main class="sections">
+        <!-- Seção: Hero -->
+        <section id="hero" class="section hero">
+            <div class="section-bg">
                 <img src="assets/close-up-leaves-flowers.jpg" alt="Background Hero">
             </div>
-            <div class="slide-content">
+            <div class="section-content">
                 <h1 class="slide-title">Experiências digitais que fazem negócios frutificarem</h1>
                 <p class="slide-text">
                     Combinamos estratégia, design, branding e tecnologia para transformar boas ideias em experiências
@@ -65,12 +66,12 @@
             </div>
         </section>
 
-        <!-- Slide 1: Manifesto -->
-        <section id="manifesto" class="slide slide--manifesto">
-            <div class="slide-background">
+        <!-- Seção: Manifesto -->
+        <section id="manifesto" class="section section--manifesto">
+            <div class="section-bg">
                 <img src="assets/juicy-yellow.jpg" alt="Background Manifesto">
             </div>
-            <div class="slide-content manifesto-content">
+            <div class="section-content manifesto-content">
                 <div class="manifesto-grid">
                     <div class="manifesto-text">
                         <h1 class="slide-title">A natureza nunca cria duas experiências exatamente iguais</h1>
@@ -102,12 +103,12 @@
             </div>
         </section>
 
-        <!-- Slide 2: Metodologia -->
-        <section id="metodologia" class="slide slide--metodologia">
-            <div class="slide-background">
+        <!-- Seção: Metodologia -->
+        <section id="metodologia" class="section section--metodologia">
+            <div class="section-bg">
                 <img src="assets/plant-growing.jpg" alt="Background Metodologia">
             </div>
-            <div class="slide-content metodologia-content">
+            <div class="section-content metodologia-content">
                 <h1 class="slide-title">Toda experiência começa antes de existir</h1>
                 <p class="slide-text">
                     Criar uma experiência digital é como cultivar algo. Antes de colher resultados, é preciso entender
@@ -142,12 +143,12 @@
             </div>
         </section>
 
-        <!-- Slide 3: Experiências -->
-        <section id="experiencias" class="slide slide--experiencias">
-            <div class="slide-background">
+        <!-- Seção: Experiências -->
+        <section id="experiencias" class="section section--experiencias">
+            <div class="section-bg">
                 <img src="assets/2148200446.jpg" alt="Background Experiências">
             </div>
-            <div class="slide-content experiencias-content">
+            <div class="section-content experiencias-content">
                 <h1 class="slide-title">Cada negócio tem seu terreno. Cada experiência, seu jeito de florescer.</h1>
                 <div class="experiencias-grid">
                     <div class="experiencias-logo">
@@ -182,12 +183,12 @@
             </div>
         </section>
 
-        <!-- Slide 4: Contato -->
-        <section id="contato" class="slide slide--contato">
-            <div class="slide-background">
+        <!-- Seção: Contato -->
+        <section id="contato" class="section section--contato">
+            <div class="section-bg">
                 <img src="assets/2148211926.jpg" alt="Background Contato">
             </div>
-            <div class="slide-content contato-content">
+            <div class="section-content contato-content">
                 <h1 class="slide-title">O que você está tentando cultivar?</h1>
                 <p class="slide-text contato-intro">
                     Talvez seja uma ideia, uma nova marca, um produto ou uma transformação que ainda está começando a
@@ -219,14 +220,7 @@
         <p>Copyright © 2026 Manga Digital - Construido com ❤, HTML, CSS e JavaScript.</p>
     </footer>
 
-    <!-- Indicadores de Slide -->
-    <div class="slide-indicators">
-        <span class="indicator active" data-slide="0"></span>
-        <span class="indicator" data-slide="1"></span>
-        <span class="indicator" data-slide="2"></span>
-        <span class="indicator" data-slide="3"></span>
-        <span class="indicator" data-slide="4"></span>
-    </div>
+    <!-- Indicadores removidos: navegação natural por scroll -->
 
     <script>
         window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
