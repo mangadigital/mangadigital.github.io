@@ -206,7 +206,7 @@ body {
     justify-content: center;
     overflow: hidden;
     padding: 6.5rem 1.5rem;
-    scroll-margin-top: 96px;
+    scroll-margin-top: 0;
 }
 
 .section-bg {
@@ -255,7 +255,9 @@ body {
 .section-content {
     position: relative;
     z-index: 1;
-    max-width: 928px;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
     padding: 2rem;
     text-align: center;
     opacity: 0;
@@ -303,16 +305,23 @@ body {
 
 /* Manifesto Layout */
 .manifesto-content {
-    max-width: 1100px;
     width: 100%;
     text-align: left;
 }
 
 .manifesto-grid {
     display: grid;
-    grid-template-columns: 7fr 5fr;
+    grid-template-columns: repeat(12, 1fr);
     gap: 3rem;
     align-items: start;
+}
+
+.manifesto-text {
+    grid-column: 1 / 8;
+}
+
+.manifesto-aside {
+    grid-column: 8 / 13;
 }
 
 .manifesto-text .slide-title {
@@ -357,7 +366,6 @@ body {
 
 /* Metodologia Layout */
 .metodologia-content {
-    max-width: 1100px;
     width: 100%;
     text-align: center;
 }
@@ -373,11 +381,12 @@ body {
 
 .metodologia-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
 }
 
 .metodologia-item {
+    grid-column: span 3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -414,7 +423,6 @@ body {
 
 /* Experiências Layout */
 .experiencias-content {
-    max-width: 1100px;
     width: 100%;
     text-align: center;
 }
@@ -425,13 +433,14 @@ body {
 
 .experiencias-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: 1.25rem;
-    max-width: 900px;
+    width: 100%;
     margin: 0 auto 2rem;
 }
 
 .experiencias-logo {
+    grid-column: span 3;
     aspect-ratio: 16 / 9;
     border: 2px solid var(--text-light);
     border-radius: 26px;
@@ -455,7 +464,7 @@ body {
 
 /* Contact Section */
 .contato-content {
-    max-width: 760px;
+    width: 100%;
 }
 
 .contato-content .slide-title {
@@ -587,8 +596,11 @@ body {
 
 /* Footer */
 .site-footer {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
     text-align: center;
     padding: 1.5rem 2rem;
     font-family: 'Lora', serif;
@@ -612,25 +624,43 @@ body {
 @media (max-width: 768px) {
     .section {
         padding: 5rem 1.5rem;
-        scroll-margin-top: 72px;
+        scroll-margin-top: 0;
     }
 
-    .hero .slide-title {
+    /* Tipografia unificada no padrão do hero */
+    .slide-title,
+    .hero .slide-title,
+    .experiencias-content .slide-title,
+    .contato-content .slide-title {
         font-size: 1.85rem;
         line-height: 1.3;
     }
 
-    .hero .slide-text {
+    .slide-text,
+    .hero .slide-text,
+    .experiencias-copy,
+    .contato-intro {
         font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .social-link,
+    .hero-cta {
+        font-size: 0.85rem;
+        padding: 0.75rem 1.75rem;
     }
 
     .hero-cta {
         margin-top: 2rem;
-        font-size: 0.85rem;
     }
 
     .manifesto-content {
         padding: 1.5rem;
+        text-align: center;
+    }
+
+    .manifesto-text {
+        text-align: center;
     }
 
     .manifesto-grid {
@@ -649,7 +679,12 @@ body {
     .manifesto-cta {
         order: 3;
         margin-top: 2rem;
-        text-align: left;
+        text-align: center;
+    }
+
+    .frosted-list {
+        list-style: none;
+        text-align: center;
     }
 
     .frosted-box {
@@ -661,16 +696,13 @@ body {
         gap: 2.5rem;
     }
 
+    .metodologia-item,
+    .experiencias-logo {
+        grid-column: 1 / -1;
+    }
+
     .metodologia-content .slide-text {
         margin-bottom: 2rem;
-    }
-
-    .slide-title {
-        font-size: 2.5rem;
-    }
-
-    .slide-text {
-        font-size: 1.1rem;
     }
 
     .social-links {
@@ -679,25 +711,7 @@ body {
     }
 
     .experiencias-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1rem;
-    }
-
-    .experiencias-content .slide-title {
-        font-size: 1.6rem;
-        line-height: 1.35;
-    }
-
-    .experiencias-copy {
-        font-size: 1rem;
-    }
-
-    .contato-content .slide-title {
-        font-size: 1.6rem;
-        line-height: 1.35;
-    }
-
-    .contato-intro {
-        font-size: 1rem;
     }
 }
