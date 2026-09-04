@@ -283,6 +283,10 @@ body {
 }
 
 /* Hero */
+.hero .slide-title {
+    font-size: 3.4rem;
+}
+
 .hero .slide-text {
     max-width: 800px;
     margin: 0 auto;
