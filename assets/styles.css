@@ -413,6 +413,47 @@ body {
     text-align: center;
 }
 
+/* Experiências Layout */
+.experiencias-content {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+}
+
+.experiencias-content .slide-title {
+    margin-bottom: 2rem;
+}
+
+.experiencias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+}
+
+.experiencias-logo {
+    aspect-ratio: 16 / 9;
+    border: 2px solid var(--text-light);
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.experiencias-logo img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+.experiencias-copy {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 /* Contact Section */
 .contact-info {
     margin-top: 2rem;
@@ -551,6 +592,20 @@ body {
     .social-links {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .experiencias-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .experiencias-content .slide-title {
+        font-size: 1.6rem;
+        line-height: 1.35;
+    }
+
+    .experiencias-copy {
+        font-size: 1rem;
     }
 
     .slide-indicators {
